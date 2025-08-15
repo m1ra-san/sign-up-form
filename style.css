@@ -1,6 +1,6 @@
 :root{
     --font-size:16px;
-    --color:rgb(78, 177, 253);
+    --color:#007BFF;
     --invalid-feild:red;
     --valid-feild:rgb(55, 255, 0);
     --font-family:Exo2;
@@ -52,7 +52,7 @@ body{
     font-size: clamp(1rem,3vw,5rem);
     width: 100%;
     position: absolute;
-    background-color: rgba(108, 113, 255, 0.652);
+    background-color: var(--color);
     color: rgb(255, 255, 255);
     padding: 30px 12px;
     bottom: 0;
@@ -100,22 +100,34 @@ p:last-child{
     margin-left: 5px;
 }
 
+input[id*="pass"]:invalid{
+    outline: 2px solid var(--invalid-feild);
+    outline-offset: 2px;
+}
+
+input[id*="pass"]:valid{
+    outline: 2px solid var(--valid-feild);
+    outline-offset: 2px;
+}
+
 
 
 input{
-    margin: var(--feild-margins) 0;
+    outline: 2px solid #abaeae;
+    outline-offset: 2px;
+    margin: 15px 0;
     border-radius: 10px;
     border: None;
     height: 1.5rem;
     width: 100%;
-    color: gray;
+    color: var(--color);
     padding-left: var(--feil-paddings);
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     box-sizing: border-box;
 }
 
 input:focus {
-  outline: 2px solid #44cef0;
+  outline: 2px solid var(--color);
   outline-offset: 2px;
 }
 

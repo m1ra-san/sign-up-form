@@ -19,24 +19,24 @@
                 <h1>Sign-up</h1>
                 <div class="feilds">
                     <div class="col1">
-                        <label for="first-name">First Name:</label><input type="text" maxlength="20" id="first-name"><br>
-                        <label for="email">Email:</label><input type="email" max="320" id="email"><br>
-                        <label for="password">Password:<span>*</span></label><input type="password" id="password" required>
+                        <label for="first-name">First Name:</label><input type="text" maxlength="20" id="first-name" placeholder="John"><br>
+                        <label for="email">Email:</label><input type="email" max="320" id="email" placeholder="john.doe@.."><br>
+                        <label for="password">Password:<span>*</span></label><input type="password" id="password"  title="Password must be at least 8 characters and contain a letter and a number" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required >
 
                     </div>
                     <div class="col2">
-                        <label for="last-name">Last Name:</label><input type="text" maxlength="20" id="last-name"><br>
-                        <label for="phone-number">Phone Number:</label><input type="text" min="4" max="17" id="phone-number"><br>
-                        <label for="confirm-password">Confirm Password:<span>*</span></label><input type="password" id="confirm-password" required>
+                        <label for="last-name">Last Name:</label><input type="text" maxlength="20" id="last-name" placeholder="Doe"><br>
+                        <label for="phone-number">Phone Number:</label><input type="text" min="4" max="17" id="phone-number" placeholder="09123.."><br>
+                        <label for="confirm-password">Confirm Password:<span>*</span></label><input type="password" id="confirm-password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required >
                     </div>
                 </div>
-                <p class="output"></p>
-                <button type="submit">Sign-up</button>
-                <p>Already have an account? Sign-up</p>
+                <p class="output" style="font-style: italic;font-size: 0.8rem;color: red;"></p>
+                <button type="submit" id="submit">Sign-up</button>
+                <p>Already have an account?<a href="http://" target="_blank" rel="noopener noreferrer">Sign-up</a></p>
             </form>
         </div>
 
     </div>
 </body>
-
+<script src="script.js"></script>
 </html>
